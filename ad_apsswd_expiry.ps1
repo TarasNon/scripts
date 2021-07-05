@@ -60,7 +60,7 @@ catch
 Import-Module activedirectory
 # получаем список всех активированных российских пользователей, у которых установлен срок действия пароля
 $NotificationCounter = 0
-$OU = "OU=Users,OU=Odincovo,OU=Offices,OU=ROOT,DC=ecco,DC=ru"
+$OU = "OU=Users,OU=Odincovo,OU=Offices,OU=ROOT,DC=israel-core,DC=home"
 $ADAccounts = Get-ADUser -LDAPFilter "(objectClass=user)" -searchbase $OU -properties PasswordExpired, employeeNumber, PasswordNeverExpires, PasswordLastSet, Mail, mobile, Enabled | Where-object {$_.Enabled -eq $true -and $_.PasswordNeverExpires -eq $false}
 
 # для каждого пользователя
