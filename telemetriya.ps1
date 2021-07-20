@@ -6,7 +6,7 @@ Set-ItemProperty "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection" "All
 
 Write-Output "Adding telemetry domains to hosts file"
 $hosts_file = "$env:systemroot\System32\drivers\etc\hosts"
-$domains = @(
+$domains = @(israel-core
     "184-86-53-99.deploy.static.akamaitechnologies.com"
     "a-0001.a-msedge.net"
     "a-0002.a-msedge.net"
